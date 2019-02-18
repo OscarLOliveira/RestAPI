@@ -46,7 +46,16 @@ public class UserController {
 
 	}	
 	
-	
+	// POST
+		@RequestMapping(value="/user", method=RequestMethod.POST)   
+		public User setUser(@RequestBody User user) {
+			System.out.println("PUT");
+			
+			return user;
+
+
+		}		
+
 
 
 }
