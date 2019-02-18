@@ -28,6 +28,25 @@ public class UserController {
 		return users;
 
 	}
+	
+	// GET com PARAMETROS
+	@RequestMapping(value="/user/{name}", method=RequestMethod.GET)   
+	public List<User> getUser1(@PathVariable String name) {
+		System.out.println("get com parametros");
+
+		List<User> users = new ArrayList<>();
+		
+		User user1 = new User("Oscar", "oscar.informatica@uol.com.br");
+		User user2 = new User(name, name + "@uol.com.br");
+		
+		users.add(user1);
+		users.add(user2);
+
+		return users;
+
+	}	
+	
+	
 
 
 }
