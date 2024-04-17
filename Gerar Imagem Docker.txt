@@ -1,0 +1,5 @@
+
+	docker build -f Dockerfile -t 565632/restapi:1.0 .
+
+	docker run --name restAPI -p 5522:5522 -d --rm 565632/restapi:1.0
+	
